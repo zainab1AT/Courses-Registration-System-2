@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #277999;
+        color: #535353;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #dcdcdc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px #277999;
+        padding: 30px;
+        margin: 30px auto;
+        width: 650px;
+      }
+
+      .flex-container > div {
+        padding: 15px;
+        margin: 15px;
+        border-radius: 6px;
+      }
+
+      .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin-bottom: 15px;
+      }
+
+      input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #277999;
+        font-size: 16px;
+        background-color: #ffffff;
+        color: #313131;
+        margin-right: 10px;
+      }
+
+      .edit {
+        background-color: #007bff;
+        margin: 5px;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        color: white;
+      }
+
+      .confirm {
+        background-color: #28a745;
+        margin: 5px;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        color: white;
+      }
+
+      .delete {
+        background-color: #dc3545;
+        margin: 5px;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        color: white;
+      }
+
+      table {
+        width: 720px;
+        border-collapse: collapse;
+        background-color: #dcdcdc;
+        color: #656565;
+        margin-left:410px;
+        border-radius: 6px;
+
+      }
+      
+      th, td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #404040;
+        /* border-radius: 6px; */
+
+      }
+      th {
+        background-color: #e0e0e0;
+      }
+      tr:hover {
+        background-color: #bebebe;
+      }
+      button {
+        padding: 12px 24px;
+        background-color: #0069d9;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mm" class="flex-container">
+      <div style="text-align: center;"><h1>Spring 2024</h1></div>
+      <div class="input-container">
+        <input type="text" id="cname" name="fname" value="">
+        <button onclick="addNewCourse(document.getElementById('cname').value)">Add</button>
+      </div>
+      <button id="add-DB-button" onclick="addtodatabase()">Save in database</button>
+    </div>
+    <div id="table"></div>
+    <script src="lab3.js"></script>
+  </body>
+</html>
